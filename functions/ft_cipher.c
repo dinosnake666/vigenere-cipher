@@ -13,9 +13,9 @@ char     *ft_cipher(char *message, int key)
         {
             value = message[i] + key;
             if  (value > 'Z')
-                value -= 26; //goes back from below
+                value -= 26; //goes back from after alphabeticals
             if  (value < 'A')
-                value += 26; //goes back from above
+                value += 26; //goes back from before alphabeticals
             message[i] = value; //re-assign after correction
         }
         
@@ -23,9 +23,9 @@ char     *ft_cipher(char *message, int key)
         {
             value = message[i] + key;
             if  (value > 'z')
-                value -= 26; //goes back from below
+                value -= 26; //goes back from after alphabeticals
             if  (value < 'a')
-                value += 26; //goes back from above 
+                value += 26; //goes back from before alphabeticals 
             message[i] = value; //re-assign after correction
         }
         i++;

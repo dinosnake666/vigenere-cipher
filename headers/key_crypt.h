@@ -1,8 +1,12 @@
 #ifndef key_crypt
 #define key_crypt
 
-char *keymaker(char *message, char *user_key, char *final_key);
-int true_len(char *key_user);
+int *keymaker(char *plaintext, char *user_key, char *long_key, int *final_key);
+int true_len(char *str);
 char *ft_cipher(char *message, int key);
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 #endif

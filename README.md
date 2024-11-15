@@ -11,5 +11,5 @@ You can decipher the message with a [tabula recta](https://en.wikipedia.org/wiki
 
 **Syntax to use the code : `./executable_name` `"key"` `"plaintext"`**
 
->[!ITP]
+>[!TIP]
 > You can use sentences with non-alphabeticals !

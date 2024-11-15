@@ -7,7 +7,7 @@ The [Vigenère cipher](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher) is a 
 You can decipher the message with a [tabula recta](https://en.wikipedia.org/wiki/Tabula_recta) if you have the key.
 
 ### How to use the code ?
-**Compile with `cc -Wall -Werror -Wextra main/main.c functions/ft_cipher.c`**
+**Compile with `cc -Wall -Werror -Wextra main/main.c functions/*.c`**
 
 **Syntax to use the code : `./executable_name` `"key"` `"plaintext"`**
 

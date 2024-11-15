@@ -2,7 +2,6 @@
 
 int *keymaker(char *plaintext, char *user_key, char *long_key, int *final_key) //makes the final_key to encrypt plaintext
 {
-  int user_size = strlen(user_key);
   int final_size = true_len(plaintext);
 
   int long_index = 0;

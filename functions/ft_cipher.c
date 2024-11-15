@@ -1,34 +1,37 @@
 #include <ctype.h>
 
-char     *ft_cipher(char *message, int key)
+char *ft_cipher(char *plaintext, int *key)
 {
-    int     i;
-    int     value; //to go beyond ascii max value
 
-    i = 0;
-    key = key % 26;
-    while (message[i])
+    int txt_index = 0;
+    int key_index = 0;
+    int value; //to go beyond ascii max value
+
+    while (plaintext[txt_index])
     {
-        if (isupper(message[i]))
+        if isupper(plaintext[txt_index])
         {
-            value = message[i] + key;
+            value = plaintext[txt_index] + key[key_index];
             if  (value > 'Z')
                 value -= 26; //goes back from after alphabeticals
             if  (value < 'A')
                 value += 26; //goes back from before alphabeticals
-            message[i] = value; //re-assign after correction
+            plaintext[txt_index] = value; //re-assign after correction
+            key_index++;
         }
-        
-        if (islower(message[i]))
+    
+        if islower(plaintext[txt_index])
         {
-            value = message[i] + key;
+            value = plaintext[txt_index] + key[key_index];
             if  (value > 'z')
                 value -= 26; //goes back from after alphabeticals
             if  (value < 'a')
                 value += 26; //goes back from before alphabeticals 
-            message[i] = value; //re-assign after correction
+            plaintext[txt_index] = value; //re-assign after correction
+            key_index++;
         }
-        i++;
+        txt_index++;
     }
-    return (message);    
+    
+    return plaintext;
 }
